@@ -19,16 +19,14 @@ class KahootBot():
         self.name = name or "".join([random.choice(f"{string.ascii_uppercase}{string.digits}") for n in range(5)])
 
     def start(self):
-    
-        
-
+ 
         while True:
             try:
                 id_textbox = web.find_element_by_xpath('//*[@id="game-input"]') 
                 break
             except selenium.common.exceptions.NoSuchElementException:
                 time.sleep(0.1)
-
+        
         id_textbox.send_keys(self.game_pin)
         id_textbox.send_keys(Keys.ENTER)
 
@@ -52,4 +50,3 @@ class KahootBot():
                 time.sleep(0.1)
 
     
-
