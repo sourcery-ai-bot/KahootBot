@@ -16,7 +16,10 @@ buttons=['//*[@id="root"]/div/main/div[2]/div/div/button[1]',
 class KahootBot():
     def __init__(self, game_pin, name = None):
         self.game_pin = game_pin
-        self.name = name or "".join([random.choice(f"{string.ascii_uppercase}{string.digits}") for n in range(5)])
+        self.name = name or "".join(
+            random.choice(f"{string.ascii_uppercase}{string.digits}")
+            for n in range(5)
+        )
 
     def start(self):
  
